@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <script src="components/bower_components/webcomponentsjs/webcomponents.js"></script>
+        <link rel="import" href="components/bower_components/current-weather/dist/current-weather.html">
+        <link rel="import" href="components/bower_components/polymer/polymer.html">
+        <link rel = "import" href = "components/bower_components/paper-button/paper-button.html">
+         <link rel="import" href="components/bower_components/core-header-panel/core-header-panel.html">
+         <link rel="import" href="components/bower_components/core-ajax/core-ajax.html">        
+        <style type = "text/css">
+            html,body {
+                height: 100%;
+                margin: 0;
+                background-color: #E5E5E5;
+                font-family: 'RobotoDraft', sans-serif;
+            }
+            
+    core-header-panel {
+      width: auto;
+      height: 100%;
+    }
+
+    .core-header {
+      height: 60px;
+      line-height: 60px;
+      font-size: 18px;
+      padding: 0 10px;
+      background-color: #4F7DC9;
+      color: #FFF;
+      transition: height 0.2s;
+    }
+
+    .content {
+      height: auto;
+      background: linear-gradient(rgb(214, 227, 231), lightblue);
+    }
+            
+        </style>
+        
+    </head>
+    <body>
+         <core-header-panel mode="waterfall">
+            <div class="core-header">CloudStats : Will it rain today?
+             </div>
+            <div class="content">
+<!--                      <paper-button>Test Button</paper-button> -->
+                 <current-weather lat="10.77" lon="76.65" units="metric"></current-weather>
+
+             </div>
+          </core-header-panel>
+
+    </body>
+</html>
